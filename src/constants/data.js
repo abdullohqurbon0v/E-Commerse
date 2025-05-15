@@ -2,7 +2,7 @@ export const products = [
     {
         id: 3,
         title: "Rolls-Royce Cullinan Black Badge, 2023",
-        price: "62 000 000 ₽",
+        price: 62000000 ,
         category: "Ultra-Luxury SUV",
         styles: [
             {
@@ -73,7 +73,7 @@ export const products = [
     {
         id: 4,
         title: "Bentley Bentayga EWB Azure First Edition, 2023",
-        price: "45 000 000 ₽",
+        price: 45000000,
         category: "Luxury SUV",
         styles: [
             {
@@ -138,7 +138,7 @@ export const products = [
     {
         id: 5,
         title: "Range Rover SV Autobiography, 2023",
-        price: "38 000 000 ₽",
+        price: 38000000,
         category: "Luxury SUV",
         styles: [
             {
@@ -202,7 +202,7 @@ export const products = [
     {
         id: 6,
         title: "BMW XM Label Red, 2023",
-        price: "39 000 000 ₽",
+        price: 39000000,
         category: "Performance Luxury SUV",
         styles: [
             {
@@ -266,7 +266,7 @@ export const products = [
     {
         id: 7,
         title: "Lexus LX 600 Ultra Luxury, 2023",
-        price: "25 000 000 ₽",
+        price: 25000000,
         category: "Luxury SUV",
         styles: [
             {
@@ -330,7 +330,7 @@ export const products = [
     {
         id: 8,
         title: "Cadillac Escalade-V, 2023",
-        price: "28 000 000 ₽",
+        price: 28000000,
         category: "Luxury SUV",
         styles: [
             {
@@ -394,7 +394,7 @@ export const products = [
     {
         id: 9,
         title: "Audi Q8 e-tron, 2023",
-        price: "14 000 000 ₽",
+        price: 14000000,
         category: "Electric SUV",
         styles: [
             {
@@ -458,7 +458,7 @@ export const products = [
     {
         id: 10,
         title: "Genesis GV80 Prestige Signature, 2023",
-        price: "10 500 000 ₽",
+        price: 10500000,
         category: "Luxury SUV",
         styles: [
             {
@@ -521,7 +521,7 @@ export const products = [
     {
         id: 11,
         title: "Tesla Model X Plaid, 2023",
-        price: "20 000 000 ₽",
+        price: 20000000,
         category: "Electric SUV",
         styles: [
             {
@@ -585,7 +585,7 @@ export const products = [
     {
         id: 12,
         title: "Toyota Land Cruiser 300 GR Sport, 2023",
-        price: "11 500 000 ₽",
+        price: 11500000 ,
         category: "Premium SUV",
         styles: [
             {
@@ -648,56 +648,41 @@ export const products = [
     }
 
 ];
-
 export const catalogs = [
-  {
-    id: 1,
-    title: "Внедорожники",
-    slug: "suv",
-    description: "Полноразмерные и компактные внедорожники для города и бездорожья.",
-    image: "/images/catalogs/suv.jpg",
-  },
-  {
-    id: 2,
-    title: "Седаны",
-    slug: "sedan",
-    description: "Классические и бизнес-седаны для комфортного передвижения.",
-    image: "/images/catalogs/sedan.jpg",
-  },
-  {
-    id: 3,
-    title: "Купе",
-    slug: "coupe",
-    description: "Спортивные двухдверные автомобили с выразительным дизайном.",
-    image: "/images/catalogs/coupe.jpg",
-  },
-  {
-    id: 4,
-    title: "Электромобили",
-    slug: "electric",
-    description: "Современные электромобили с нулевыми выбросами и высоким запасом хода.",
-    image: "/images/catalogs/electric.jpg",
-  },
-  {
-    id: 5,
-    title: "Лимузины",
-    slug: "limousine",
-    description: "Премиальные удлинённые автомобили для представительских нужд.",
-    image: "/images/catalogs/limousine.jpg",
-  },
-  {
-    id: 6,
-    title: "Пикапы",
-    slug: "pickup",
-    description: "Надёжные автомобили с грузовой платформой и повышенной проходимостью.",
-    image: "/images/catalogs/pickup.jpg",
-  },
-  {
-    id: 7,
-    title: "Минивэны",
-    slug: "minivan",
-    description: "Идеальный выбор для семьи и путешествий на большие расстояния.",
-    image: "/images/catalogs/minivan.jpg",
-  },
-];
-
+    {
+      id: 1,
+      title: "Внедорожники",
+      slug: "suv",
+    },
+    {
+      id: 2,
+      title: "Седаны",
+      slug: "sedan",
+    },
+    {
+      id: 3,
+      title: "Купе",
+      slug: "coupe",
+    },
+    {
+      id: 4,
+      title: "Электромобили",
+      slug: "electric",
+    },
+    {
+      id: 5,
+      title: "Лимузины",
+      slug: "limousine",
+    },
+    {
+      id: 6,
+      title: "Пикапы",
+      slug: "pickup",
+    },
+    {
+      id: 7,
+      title: "Минивэны",
+      slug: "minivan",
+    },
+  ];
+  

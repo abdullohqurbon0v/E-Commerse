@@ -1,122 +1,17 @@
 import { ChevronRight, Star } from "lucide-react";
 import React from "react";
+import { useParams } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { products } from "../constants/data";
 
-const products = [
-    {
-        id: 1,
-        title: "Mercedes-Benz Maybach GLS 600, 2023",
-        price: "55 000 000 ₽",
-        category: "Ultra-Luxury SUV",
-        styles: [
-            {
-                name: "Standard",
-                description:
-                    "Klassik dizayn, xrom aksentlar va bir rangli bo'yoq bilan oqlangan ko'rinish.",
-                exterior_colors: [
-                    "Obsidian Black",
-                    "Polar White",
-                    "Emerald Green",
-                    "Selenite Grey",
-                    "Hyacinth Red Metallic",
-                ],
-                interior_colors: ["Black Nappa Leather", "Macchiato Beige", "Mahogany Brown"],
-            },
-            {
-                name: "Night Series",
-                description:
-                    "Qorong'u xrom va pushti oltin aksentlar, ikki rangli bo'yoq va maxsus 23 dyuymli monoblok g'ildiraklar.",
-                exterior_colors: [
-                    "Obsidian Black with Rubellite Red",
-                    "Sodalite Blue Metallic",
-                    "High Tech Silver",
-                ],
-                interior_colors: ["Crystal White Nappa Leather", "Black Pearl Nappa Leather"],
-            },
-        ],
-        images: [
-            {
-                url: "https://avatars.mds.yandex.net/get-autoru-vos/5231844/ffdb0947574688e59f64a347545d3c8d/832x624",
-                alt: "Mercedes-Benz Maybach GLS 600 2023 front view",
-                category: "exterior",
-            },
-            {
-                url: "https://avatars.mds.yandex.net/get-autoru-vos/2078183/909cffde1e671a98a64559b049e1937e/832x624",
-                alt: "Mercedes-Benz Maybach GLS 600 2023 interior view",
-                category: "interior",
-            },
-            {
-                url: "https://avatars.mds.yandex.net/get-autoru-vos/5451090/4153d59db2f4e86b07fb00de4aab5a44/832x624",
-                alt: "Mercedes-Benz Maybach GLS 600 2023 Night Series exterior",
-                category: "exterior",
-            },
-            {
-                url: "https://avatars.mds.yandex.net/get-autoru-vos/2178905/0eb92a9c6fa0b04bbc89e7558c96610d/832x624",
-                alt: "Mercedes-Benz Maybach GLS 600 2023 rear seats",
-                category: "interior",
-            },
-        ],
-        materials: {
-            exterior: {
-                body: "High-strength steel and aluminum alloy",
-                grille: "Chrome-plated with Maybach monogram mesh",
-                running_boards: "Aluminum with inlaid grips",
-                wheels: "23-inch monoblock forged alloy",
-            },
-            interior: {
-                upholstery: "Nappa leather",
-                trim: [
-                    "MANUFAKTUR Open-pore Dark Brown Fishbone Pattern Walnut wood",
-                    "High-gloss Brown Linden Wood",
-                    "Manufaktur Piano Lacquer Flowing Lines",
-                ],
-                accents: "Dark chrome and rose gold (Night Series)",
-                headliner: "Microfiber DINAMICA",
-            },
-        },
-        specifications: {
-            engine: {
-                type: "4.0L V8 Twin-Turbo with 48V mild-hybrid system",
-                horsepower: "550 hp",
-                torque: "538 lb-ft",
-                acceleration: "0-60 mph in 4.7 seconds",
-            },
-            transmission: "9-speed automatic",
-            drivetrain: "4MATIC all-wheel drive",
-            fuel_economy: {
-                city: "13 mpg",
-                highway: "18 mpg",
-            },
-            dimensions: {
-                length: "5205 mm",
-                width: "2157 mm",
-                height: "1838 mm",
-                wheelbase: "3135 mm",
-                ground_clearance: "Not specified",
-                fuel_tank_capacity: "90 liters",
-                boot_space: "520 liters",
-            },
-        },
-        features: [
-            "29-speaker Burmester High-End 3D sound system with Dolby Atmos",
-            "Dual 12.3-inch MBUX infotainment screens",
-            "Rear-seat entertainment with two 11.6-inch touchscreens",
-            "Executive Climate System with 4-zone control",
-            "E-Active Body Control air suspension with Maybach mode",
-            "Optional refrigerated compartment with silver champagne flutes",
-            "Power-adjustable, heated, ventilated, and massaging seats",
-            "Panoramic sunroof",
-            "Level 2 ADAS suite with semi-autonomous driving",
-        ],
-    },
-];
 
 const Product = () => {
-    const product = products[0];
+    const { id } = useParams()
+    const product = products.filter(x => x.id == id)[0]
 
     return (
         <div className="min-h-screen bg-gray-100 font-mono">

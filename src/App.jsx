@@ -1,33 +1,39 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Footer from './components/footer'
-import Navbar from './components/navbar'
-import MainPage from './pages/main'
-import Product from './pages/product'
+import React from 'react';
+import { Toaster } from 'react-hot-toast';
+import { Route, Routes } from 'react-router-dom';
+import Footer from './components/footer';
+import Navbar from './components/navbar';
+import { CartProvider } from './context/CartContext';
+import { FavoritesProvider } from './context/FavoritesContext';
+import './index.css';
+import CartPage from './pages/CartPage';
+import CatalogPage from './pages/CatalogPage';
+import CheckoutPage from './pages/CheckoutPage';
+import { FavouritePage } from './pages/FavouritePage';
+import MainPage from './pages/main';
+import Product from './pages/product';
 
 const App = () => {
     return (
-        <>
-            <Navbar />
-            <Routes>
-                <Route index element={<MainPage />} />
-                <Route path='/catalogs' element={<MainPage />} />
-                <Route path='/product/:id' element={<Product />} />
-            </Routes>
-            <Footer />
-        </>
-    )
-}
 
-export default App
+        <FavoritesProvider>
+            <CartProvider>
+                <Navbar />
+                <Routes>
+                    <Route path="/catalog/:slug" element={<CatalogPage />} />
+                    <Route index element={<MainPage />} />
+                    <Route path="/catalogs" element={<MainPage />} />
+                    <Route path="/product/:id" element={<Product />} />
+                    <Route path="/favorites" element={<FavouritePage />} />
+                    <Route path="/cart" element={<CartPage />} />
+                    <Route path="/checkout" element={<CheckoutPage />} />
+                </Routes>
+                <Toaster position="top-center" />
+                <Footer />
+            </CartProvider>
+        </FavoritesProvider>
 
-const products = [
-    {
-        id: 1,
-        title: "Gaz Plita"
-    },
-    {
-        id: 2,
-        title: "Chang Yutgich"
-    }
-]
+    );
+};
+
+export default App;
