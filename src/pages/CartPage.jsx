@@ -10,17 +10,19 @@ const CartPage = () => {
         return acc + price * (item.quantity || 1);
     }, 0);
 
+    const totalItems = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
+
     return (
-        <div className="max-w-6xl mx-auto p-6 flex gap-10">
+        <div className="max-w-6xl mx-auto p-4 sm:p-6 flex flex-col lg:flex-row gap-6">
             <div className="flex-1">
-                <h1 className="text-3xl font-bold mb-6">
-                    Ваша Корзина ({cart.reduce((acc, item) => acc + (item.quantity || 1), 0)} {cart.reduce((acc, item) => acc + (item.quantity || 1), 0) === 1 ? 'товар' : 'товаров'})
+                <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
+                    Ваша Корзина ({totalItems} {totalItems === 1 ? 'товар' : 'товаров'})
                 </h1>
 
                 {cart.length === 0 ? (
                     <p className="text-gray-600">Ваша корзина пуста.</p>
                 ) : (
-                    <ul className="space-y-6">
+                    <ul className="space-y-4 sm:space-y-6">
                         {cart.map(item => {
                             const price = Number(String(item.price).replace(/\s|₽/g, '')) || 0;
                             const itemTotal = price * (item.quantity || 1);
@@ -28,7 +30,7 @@ const CartPage = () => {
                             return (
                                 <li
                                     key={item.id}
-                                    className="flex items-center justify-between p-4  rounded-lg shadow-sm bg-white"
+                                    className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-lg shadow-sm bg-white gap-4"
                                 >
                                     <div className="flex items-start gap-4">
                                         <img
@@ -37,8 +39,8 @@ const CartPage = () => {
                                             className="w-20 h-20 object-cover rounded"
                                         />
                                         <div className="flex flex-col">
-                                            <h2 className="font-semibold">{item.title}</h2>
-                                            <p className="text-gray-500">{item.category}</p>
+                                            <h2 className="font-semibold text-base sm:text-lg">{item.title}</h2>
+                                            <p className="text-gray-500 text-sm">{item.category}</p>
                                             <div className="flex items-center gap-3 mt-3 bg-gray-100 rounded-full w-max px-4 py-1">
                                                 <button
                                                     onClick={() => updateQuantity(item.id, -1)}
@@ -56,8 +58,8 @@ const CartPage = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="flex flex-col items-center gap-2">
-                                        <strong className="mb-1">{itemTotal.toLocaleString()} ₽</strong>
+                                    <div className="flex flex-row sm:flex-col items-center sm:items-end justify-between gap-2 sm:gap-1 w-full sm:w-auto">
+                                        <strong className="text-sm sm:text-base">{itemTotal.toLocaleString()} ₽</strong>
                                         <button
                                             onClick={() => removeFromCart(item.id)}
                                             className="text-red-500 hover:text-red-700"
@@ -72,22 +74,24 @@ const CartPage = () => {
                     </ul>
                 )}
             </div>
-            <div className="w-80 p-6 bg-white rounded-lg shadow">
-                <h2 className="text-xl font-semibold mb-4">Заказ</h2>
-                <p>
-                    Товары: <strong>{cart.reduce((acc, item) => acc + (item.quantity || 1), 0)}</strong>
+
+            {/* Sidebar */}
+            <div className="w-full lg:w-80 p-4 sm:p-6 bg-white rounded-lg shadow">
+                <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Заказ</h2>
+                <p className="text-sm sm:text-base">
+                    Товары: <strong>{totalItems}</strong>
                 </p>
-                <p className="mt-2">
+                <p className="mt-2 text-sm sm:text-base">
                     Сумма: <strong>{total.toLocaleString()} ₽</strong>
                 </p>
 
                 <div className="mt-6 flex flex-col gap-3">
-                    <p className="text-lg font-semibold">
+                    <p className="text-base sm:text-lg font-semibold">
                         Итого: <span>{total.toLocaleString()} ₽</span>
                     </p>
                     <Link
                         to="/checkout"
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg text-center"
+                        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-lg text-center text-sm sm:text-base"
                     >
                         Перейти к оформлению
                     </Link>

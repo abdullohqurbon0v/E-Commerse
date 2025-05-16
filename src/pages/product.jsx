@@ -35,15 +35,12 @@ const Product = () => {
                         {product.images.map((image) => (
                             <SwiperSlide key={image.url}>
                                 <div className="relative h-96 w-full">
-                                    <picture>
-                                        <source srcSet={image.url.replace(".jpg", ".webp")} type="image/webp" />
-                                        <img
-                                            src={image.url}
-                                            alt={image.alt}
-                                            loading="lazy"
-                                            className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-                                        />
-                                    </picture>
+                                    <img
+                                        src={image.url}
+                                        alt={image.alt}
+                                        loading="lazy"
+                                        className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                                    />
                                     <div className="absolute bottom-4 left-4 bg-emerald-900/70 text-white px-3 py-1 rounded-md text-sm">
                                         {image.category === "exterior" ? "Tashqi ko‘rinish" : "Ichki ko‘rinish"}
                                     </div>

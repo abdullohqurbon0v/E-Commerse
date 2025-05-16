@@ -14,12 +14,12 @@ export const products = [
         ],
         images: [
             {
-                url: "https://example.com/cullinan-black-exterior.jpg",
+                url: "https://pictures.dealer.com/r/rollsroyceofaustin/0975/8a06b82de9392212406beaa169c45ba9x.jpg",
                 alt: "Rolls-Royce Cullinan Black Badge exterior",
                 category: "exterior"
             },
             {
-                url: "/images/cullinan-interior.jpg",
+                url: "https://www.motortrend.com/uploads/sites/5/2020/06/2020-rolls-royce-cullinan.png",
                 alt: "Rolls-Royce Cullinan Black Badge interior",
                 category: "interior"
             }
@@ -85,7 +85,13 @@ export const products = [
         ],
         images: [
             {
-                url: "https://example.com/bentayga-ewb.jpg",
+                url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQymHeDYDWdEnL1Z0qcM5XjMx_wLQSq0pFtKA&s",
+                alt: "Bentley Bentayga EWB Azure exterior",
+                category: "exterior"
+            },
+
+            {
+                url: "https://img.sm360.ca/ir/w640h390c/images/newcar/ca/2023/bentley/bentayga-ewb/azure/suv/exteriorColors/2023_bentley_bentayga_ewb_azure_032_org.png",
                 alt: "Bentley Bentayga EWB Azure exterior",
                 category: "exterior"
             }
@@ -150,7 +156,12 @@ export const products = [
         ],
         images: [
             {
-                url: "https://example.com/range-rover-sv.jpg",
+                url: "https://img.sm360.ca/ir/w640h333c/images/newcar/ca/2023/land-rover/range-rover/sv-swb/suv/exteriorColors/2023_land-rover_range-rover_sv-swb_032_1ej.png",
+                alt: "Range Rover SV Autobiography exterior",
+                category: "exterior"
+            },
+            {
+                url: "https://minerva.leadboxhq.com/wp-content/uploads/2022/09/2023_landrover_rangerover_autobiography_SR_FujiWhite-removebg-preview-800x289.png",
                 alt: "Range Rover SV Autobiography exterior",
                 category: "exterior"
             }
@@ -214,7 +225,17 @@ export const products = [
         ],
         images: [
             {
-                url: "https://example.com/bmw-xm-red.jpg",
+                url: "https://vehicle-images.dealerinspire.com/c941-18003890/5YM33CS0XS9Z51069/7202607e8b5eea6cd1e07d13685ebe61.jpg",
+                alt: "BMW XM Label Red exterior",
+                category: "exterior"
+            },
+            {
+                url: "https://autoimage.capitalone.com/dealer/2024-BMW-XM-RED_LABEL-5YM33CS07R9U83179-vauto_5YM33CS07R9U83179_MP7433-403953995ae416971807baeafee84a65-bg_1.jpg?width=640&height=480",
+                alt: "BMW XM Label Red exterior",
+                category: "exterior"
+            },
+            {
+                url: "https://cdn.imagin.studio/getImage?customer=gbxlcr-vehicle-management-ltd&billingTag=&make=BMW&modelFamily=Xm&modelRange=XM%20ESTATE%20SPECIAL%20EDITIONS&modelVariant=SUV&powerTrain=Petrol%20Parallel%20PHEV&modelYear=2024&trim=Label%20Red%20Edition&bodySize=5&fileType=webp&angle=25",
                 alt: "BMW XM Label Red exterior",
                 category: "exterior"
             }
@@ -278,7 +299,7 @@ export const products = [
         ],
         images: [
             {
-                url: "https://example.com/lexus-lx600.jpg",
+                url: "https://images.carprices.com/pricebooks_data/usa/colorized/2023/Lexus/View2/LX_600/Ultra_Luxury/9624_085.png",
                 alt: "Lexus LX 600 Ultra Luxury exterior",
                 category: "exterior"
             }
@@ -342,7 +363,17 @@ export const products = [
         ],
         images: [
             {
-                url: "https://example.com/escalade-v.jpg",
+                url: "https://media.assets.sincrod.com/websites/content/motp-dublin-portal/about_messages/progressive-2.0/f9388805fb924b4e88aed383d57811b8_c2x0-956x540.jpg",
+                alt: "Cadillac Escalade V exterior",
+                category: "exterior"
+            },
+            {
+                url: "https://di-uploads-pod32.dealerinspire.com/cadillacofnaperville/uploads/2023/01/2023-Cadillac-Escalade-PREMIUM-LUXURY.png",
+                alt: "Cadillac Escalade V exterior",
+                category: "exterior"
+            },
+            {
+                url: "https://di-sitebuilder-assets.dealerinspire.com/GMimages/gmMLP/cadillac/Escalade/2024/Colors/Galactic+Gray+Metallic.png",
                 alt: "Cadillac Escalade V exterior",
                 category: "exterior"
             }
@@ -406,7 +437,7 @@ export const products = [
         ],
         images: [
             {
-                url: "https://example.com/q8-etron.jpg",
+                url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHfHRlHJdHntK1SgGhl9aPoVv_uU-eT-K9dA&s",
                 alt: "Audi Q8 e-tron exterior",
                 category: "exterior"
             }
@@ -470,7 +501,17 @@ export const products = [
         ],
         images: [
             {
-                url: "https://example.com/gv80-prestige.jpg",
+                url: "https://www.genesis.com/content/dam/genesis-p2/ca/assets/models/gv80/my25-ca/colour/genesis-gv80-3_5-colour-glossy-savile-silver-small.png",
+                alt: "Genesis GV80 exterior",
+                category: "exterior"
+            },
+            {
+                url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-zm2jtYlFOuVZxBeUTJiLnY0gl4dZdAey-Q&s",
+                alt: "Genesis GV80 exterior",
+                category: "exterior"
+            },
+            {
+                url: "https://di-uploads-pod6.dealerinspire.com/siddillonautogroup/uploads/2024/09/2024-Genesis-GV80-Prestige-Signature.jpg",
                 alt: "Genesis GV80 exterior",
                 category: "exterior"
             }
@@ -533,7 +574,17 @@ export const products = [
         ],
         images: [
             {
-                url: "https://example.com/tesla-modelx.jpg",
+                url: "https://autopremiumgroup.ru/m/_versions/catalog/autos/2023/tesla_model_x_2023_vnedorozhnik_5dv/plaid/model_x_23_plaid_pearl_white_image_series.jpg",
+                alt: "Tesla Model X exterior",
+                category: "exterior"
+            },
+            {
+                url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI8CLmdtDZv2FJ9TCgWURr1H-OjiuXbVZdkA&s",
+                alt: "Tesla Model X exterior",
+                category: "exterior"
+            },
+            {
+                url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROqk6IUUKWzHs4ANBiGo7PD8pnvByhjZYstw&s",
                 alt: "Tesla Model X exterior",
                 category: "exterior"
             }
@@ -597,7 +648,12 @@ export const products = [
         ],
         images: [
             {
-                url: "https://example.com/landcruiser-300.jpg",
+                url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEoTAJPIcG3W_ufny1mUzrXsnu-cNqJeKfAA&s",
+                alt: "Land Cruiser 300 GR Sport",
+                category: "exterior"
+            },
+            {
+                url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThB0EmGJrJlEIwa2Akj3BS-CZ_Y-N6tz2KJw&s",
                 alt: "Land Cruiser 300 GR Sport",
                 category: "exterior"
             }
@@ -685,4 +741,3 @@ export const catalogs = [
       slug: "minivan",
     },
   ];
-  

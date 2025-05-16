@@ -1,18 +1,19 @@
 import { Heart, ShoppingCart } from "lucide-react";
 import React from "react";
-import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 import { useFavorites } from '../context/FavoritesContext';
-
 
 const ProductCard = ({ product }) => {
     const { toggleFavorite, isFavorite } = useFavorites();
     const { addToCart } = useCart();
+    const navigate = useNavigate();
 
     const liked = isFavorite(product.id);
 
-    const handleAddToCart = () => {
+    const handleAddToCart = (e) => {
+        e.stopPropagation(); // предотвратить всплытие
         const productForCart = {
             id: product.id,
             title: product.title,
@@ -25,11 +26,23 @@ const ProductCard = ({ product }) => {
         toast.success("Товар добавлен в корзину");
     };
 
+    const handleToggleFavorite = (e) => {
+        e.stopPropagation(); // предотвратить всплытие
+        toggleFavorite(product);
+    };
+
+    const handleCardClick = () => {
+        navigate(`/product/${product.id}`);
+    };
+
     return (
-        <div className="bg-white relative shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition duration-300">
+        <div
+            onClick={handleCardClick}
+            className="bg-white relative shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer"
+        >
             <div
-                className="absolute top-3 right-3 cursor-pointer"
-                onClick={() => toggleFavorite(product)}
+                className="absolute top-3 right-3 cursor-pointer z-10"
+                onClick={handleToggleFavorite}
             >
                 <Heart
                     size={24}
@@ -37,13 +50,13 @@ const ProductCard = ({ product }) => {
                 />
             </div>
 
-            <Link to={`/product/${product.id}`}>
+            <div>
                 <img
                     src={product.images[0].url}
                     alt={product.images[0].alt}
                     className="w-full h-56 object-contain"
                 />
-            </Link>
+            </div>
 
             <div className="p-4 flex flex-col justify-between h-48">
                 <div>
@@ -53,14 +66,12 @@ const ProductCard = ({ product }) => {
 
                 <div className="flex items-center justify-between mt-4">
                     <span className="text-xl font-bold text-emerald-700">{product.price}</span>
-                    <div className="flex gap-2">
-                        <button
-                            onClick={handleAddToCart}
-                            className="bg-gray-600 hover:bg-gray-700 cursor-pointer text-white p-2 rounded-lg"
-                        >
-                            <ShoppingCart size={24} />
-                        </button>
-                    </div>
+                    <button
+                        onClick={handleAddToCart}
+                        className="bg-gray-600 hover:bg-gray-700 text-white p-2 rounded-lg z-10"
+                    >
+                        <ShoppingCart size={24} />
+                    </button>
                 </div>
             </div>
         </div>
