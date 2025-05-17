@@ -1,9 +1,9 @@
+import { ArrowLeftRight, Menu, ShoppingCart, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, ShoppingCart, X } from 'lucide-react';
+import FavoritesCounter from '../components/FavoritesCounter';
 import { catalogs } from '../constants/data';
 import { useCart } from '../context/CartContext';
-import FavoritesCounter from '../components/FavoritesCounter';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +30,14 @@ const Navbar = () => {
                             Избранное
                         </p>
                     </div>
+                    <Link to={'/compare'}>
+                        <div className="flex flex-col items-center group cursor-pointer">
+                            <ArrowLeftRight className="h-7 w-7 text-gray-600 group-hover:text-blue-500 transition-colors duration-200" />
+                            <p className="text-sm text-gray-600 group-hover:text-blue-500 transition-colors duration-200 hidden md:block">
+                                Сравнить
+                            </p>
+                        </div>
+                    </Link>
 
                     <Link to="/cart" className="relative flex flex-col items-center group">
                         <ShoppingCart className="h-7 w-7 text-gray-600 group-hover:text-green-500 transition-colors duration-200" />
@@ -44,8 +52,6 @@ const Navbar = () => {
                     </Link>
                 </div>
             </div>
-
-            {/* Меню каталога без изображений и описаний */}
             <div
                 className={`fixed top-0 left-0 h-full w-[300px] bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'
                     }`}

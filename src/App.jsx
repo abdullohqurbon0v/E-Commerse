@@ -9,6 +9,7 @@ import './index.css';
 import CartPage from './pages/CartPage';
 import CatalogPage from './pages/CatalogPage';
 import CheckoutPage from './pages/CheckoutPage';
+import ComparePage from './pages/ComparePage';
 import { FavouritePage } from './pages/FavouritePage';
 import MainPage from './pages/main';
 import Product from './pages/product';
@@ -26,6 +27,7 @@ const App = () => {
                     <Route path="/product/:id" element={<Product />} />
                     <Route path="/favorites" element={<FavouritePage />} />
                     <Route path="/cart" element={<CartPage />} />
+                    <Route path='/compare' element={<ComparePage />} />
                     <Route path="/checkout" element={<CheckoutPage />} />
                 </Routes>
                 <Toaster position="top-center" />
